@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>telega.press</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.4/css/dataTables.bootstrap5.css">
+
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+
+
+    <link rel="stylesheet" href="style.css?v2">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">telega.press</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Аналитика</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">FAQ</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn_black">
+                        Добавить канал
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 3.33334V12.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3.3335 8H12.6668" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                	<div class="breadcrumbs_wrap_tag">
+                    <div class="breadcrumbs_wrap">
+                        <a href="#">Главная</a> / <a href="#">Каналы</a> /<span class="current_page active">Каналы</span>
+                    </div>
+                    <div class="tag_wrap">
+                    	<div class="item_tag">
+                    		<img src="img/tag.svg" alt=""> Избранное <a href="#"><img src="img/icon-close.svg" alt=""></a>
+                    	</div>
+                    	<a href="#" class="item_tag item_tag_create">
+                    		+ New Tag
+                    	</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-12">
+        			<div class="title_page_post">
+        			<h1>Digital-трафик</h1>
+					<button type="button" class="border-0 tooltip_custom" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="right" title="<span>Графики обновляются автоматически<br> <u>два раза в день</u></span>">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_316_4623)">
+<path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" stroke="#6C7478" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 12V9" stroke="#6C7478" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 6H9.0001" stroke="#6C7478" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_316_4623">
+<rect width="18" height="18" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+					</button>
+				</div>
+        		</div>
+        	</div>
+        	<div class="card_statics">
+        	<div class="row justify-content-xl-between justify-content-lg-center">
+				<div class="col-xl-4 col-lg-6 col-sm-12 col-md-6 mb-lg-3 mb-md-3">
+					<div class="item_card">
+						<div class="row justify-content-xl-between align-items-end">
+							<div class="col-xl-8 col-lg-6 col-md-6 col-sm-8 col-12">
+								<div class="item_card_contnet">
+									<div class="title_card">Лайков</div>
+									<div class="static_number">244 млн.</div>
+									<div class="card_postion card_postion_down">10% <img src="img/raiting-down.svg" alt=""></div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-12">
+								  <div id="card_like" class="card_like"></div>
+							</div>
+						</div>
+					</div>
+	            </div>
+				<div class="col-xl-4 col-lg-6 col-sm-12 col-md-6 mb-lg-3 mb-md-3">
+					<div class="item_card">
+						<div class="row justify-content-lg-between align-items-end">
+							<div class="col-xl-8 col-lg-6 col-md-6 col-sm-8 col-12">
+								<div class="item_card_contnet">
+									<div class="title_card">Просмотров</div>
+									<div class="static_number">48 млрд.</div>
+									<div class="card_postion card_postion_top">20% <img src="img/raiting-up.svg" alt=""></div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-12">
+								  <div id="card_like2" class="card_like"></div>
+							</div>
+						</div>
+					</div>
+	            </div>
+				<div class="col-xl-4 col-lg-6 col-sm-12 col-md-6 mb-lg-3 mb-md-3">
+					<div class="item_card">
+						<div class="row justify-content-lg-between align-items-end">
+							<div class="col-xl-8 col-lg-6 col-md-6 col-sm-8 col-12">
+								<div class="item_card_contnet">
+									<div class="title_card">Репостов</div>
+									<div class="static_number">10 тыс.</div>
+									<div class="card_postion card_postion_down">10% <img src="img/raiting-down.svg" alt=""></div>
+								</div>
+							</div>
+							<div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-12">
+								  <div id="card_like3" class="card_like"></div>
+							</div>
+						</div>
+					</div>
+	            </div>
+        	</div>
+			</div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-lg-flex align-items-lg-end justify-content-lg-between ">
+                        <div class="description_page">
+                            <h1 class="title title_table_card">Статистика канала</h1>
+                            </div>
+                    </div>       
+                </div>
+                <div class="col-12">
+                	<div class="card_shadow">
+                    <input name="startDate" hidden>
+                    <input name="endDate" hidden>
+                    <div class="filter_search d-flex">
+                        <input type="text" class="form-control" id="search_table" placeholder="Найти">
+                        <button id="selectedPeriod">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.6667 2.66666H3.33333C2.59695 2.66666 2 3.26362 2 4V13.3333C2 14.0697 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0697 14 13.3333V4C14 3.26362 13.403 2.66666 12.6667 2.66666Z" stroke="#201E25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10.6665 1.33334V4" stroke="#201E25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5.3335 1.33334V4" stroke="#201E25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 6.66666H14" stroke="#201E25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <p>Выберите период</p>
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="#201E25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div id="date_range" style="display: none;"></div>
+                        <div id="date_display"></div>
+                        <div id="positionFilter">
+
+                        </div>
+                    </div>
+
+
+
+                    <table id="StaticTable" class="table table_static table-responsive display" style="width: 100%;">
+                        <thead>
+                                <th>Заголовок</th>
+                                <th>Дата публикации</th>
+                                <th>Лайков</th>
+                                <th>Репостов</th>
+                                <th>Оценка канала</th>
+                                
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                       <!--    <tr>
+                                <td>
+                                    <a href="#" class="post">
+                                        <div class="title_post">
+                                            <h3>Быстрые продажи из CRM</h3>
+                                            <p class="m-0 desc_post">Коллеги, тут пишут, что на ютубе была монетизация. Вы деньги себе...</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>2024-08-01</td>
+                                <td>23</td>
+                                <td>5</td>
+                                <td>5/10 <span class="rating rating_top"></span></td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <a href="#" class="post">
+                                        <div class="title_post">
+                                            <h3>Быстрые продажи из CRM1</h3>
+                                            <p class="m-0 desc_post">Коллеги, тут пишут, что на ютубе была монетизация. Вы деньги себе...</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>2024-08-05</td>
+                                <td>23</td>
+                                <td>5</td>
+                                <td>5/10 <span class="rating rating_top"></span></td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <a href="#" class="post">
+                                        <div class="title_post">
+                                            <h3>Быстрые продажи из CRM1</h3>
+                                            <p class="m-0 desc_post">Коллеги, тут пишут, что на ютубе была монетизация. Вы деньги себе...</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>2024-08-15</td>
+                                <td>23</td>
+                                <td>5</td>
+                                <td>5/10 <span class="rating rating_top"></span></td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <a href="#" class="post">
+                                        <div class="title_post">
+                                            <h3>Быстрые продажи из CRM2</h3>
+                                            <p class="m-0 desc_post">Коллеги, тут пишут, что на ютубе была монетизация. Вы деньги себе...</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>2024-08-25</td>
+                                <td>23</td>
+                                <td>5</td>
+                                <td>5/10 <span class="rating rating_top"></span></td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <a href="#" class="post">
+                                        <div class="title_post">
+                                            <h3>Быстрые продажи из CRM2</h3>
+                                            <p class="m-0 desc_post">Коллеги, тут пишут, что на ютубе была монетизация. Вы деньги себе...</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>2024-08-26</td>
+                                <td>23</td>
+                                <td>5</td>
+                                <td>5/10 <span class="rating rating_top"></span></td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <a href="#" class="post">
+                                        <div class="title_post">
+                                            <h3>Быстрые продажи из CRM</h3>
+                                            <p class="m-0 desc_post">Коллеги, тут пишут, что на ютубе была монетизация. Вы деньги себе...</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>2024-08-28</td>
+                                <td>23</td>
+                                <td>5</td>
+                                <td>5/10 <span class="rating rating_top"></span></td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <a href="#" class="post">
+                                        <div class="title_post">
+                                            <h3>Быстрые продажи из CRM</h3>
+                                            <p class="m-0 desc_post">Коллеги, тут пишут, что на ютубе была монетизация. Вы деньги себе...</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>2024-08-29</td>
+                                <td>23</td>
+                                <td>5</td>
+                                <td>5/10 <span class="rating rating_top"></span></td>
+                            </tr>
+                           <tr>
+                                <td>
+                                    <a href="#" class="post">
+                                        <div class="title_post">
+                                            <h3>Быстрые продажи из CRM</h3>
+                                            <p class="m-0 desc_post">Коллеги, тут пишут, что на ютубе была монетизация. Вы деньги себе...</p>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>2024-08-30</td>
+                                <td>23</td>
+                                <td>5</td>
+                                <td>5/10 <span class="rating rating_top"></span></td>
+                            </tr> -->
+    
+                            <!-- Можно добавить больше данных -->
+                        </tbody>
+                    </table>
+            
+<div class="empty-table-message" >
+<div class="error-tables">
+<svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M60.7208 30.3604C60.7208 26.3734 59.9356 22.4255 58.4098 18.742C56.884 15.0585 54.6477 11.7116 51.8285 8.89236C49.0093 6.07314 45.6624 3.8368 41.9789 2.31105C38.2954 0.785296 34.3474 0 30.3604 0C26.3734 0 22.4255 0.785296 18.742 2.31105C15.0585 3.8368 11.7116 6.07314 8.89236 8.89236C6.07314 11.7116 3.8368 15.0585 2.31105 18.742C0.785295 22.4255 -5.94107e-08 26.3734 0 30.3604C1.19985e-07 38.4125 3.19868 46.1348 8.89236 51.8285C14.586 57.5222 22.3083 60.7208 30.3604 60.7208C38.4125 60.7208 46.1348 57.5222 51.8285 51.8285C57.5222 46.1348 60.7208 38.4125 60.7208 30.3604ZM5.06007 30.3604C5.06007 23.6504 7.72564 17.2151 12.4704 12.4704C17.2151 7.72564 23.6504 5.06007 30.3604 5.06007C37.0705 5.06007 43.5057 7.72564 48.2505 12.4704C52.9952 17.2151 55.6608 23.6504 55.6608 30.3604C55.6608 37.0705 52.9952 43.5057 48.2505 48.2505C43.5057 52.9952 37.0705 55.6608 30.3604 55.6608C23.6504 55.6608 17.2151 52.9952 12.4704 48.2505C7.72564 43.5057 5.06007 37.0705 5.06007 30.3604ZM25.3004 24.0353C25.3004 24.5337 25.2022 25.0272 25.0115 25.4876C24.8208 25.9481 24.5412 26.3664 24.1888 26.7188C23.8364 27.0712 23.418 27.3508 22.9576 27.5415C22.4972 27.7322 22.0037 27.8304 21.5053 27.8304C21.0069 27.8304 20.5134 27.7322 20.053 27.5415C19.5926 27.3508 19.1742 27.0712 18.8218 26.7188C18.4694 26.3664 18.1898 25.9481 17.9991 25.4876C17.8084 25.0272 17.7102 24.5337 17.7102 24.0353C17.7102 23.0288 18.1101 22.0635 18.8218 21.3518C19.5335 20.6401 20.4988 20.2403 21.5053 20.2403C22.5118 20.2403 23.4771 20.6401 24.1888 21.3518C24.9005 22.0635 25.3004 23.0288 25.3004 24.0353ZM43.0106 24.0353C43.0106 25.0418 42.6108 26.0071 41.8991 26.7188C41.1873 27.4306 40.2221 27.8304 39.2156 27.8304C38.209 27.8304 37.2438 27.4306 36.532 26.7188C35.8203 26.0071 35.4205 25.0418 35.4205 24.0353C35.4205 23.0288 35.8203 22.0635 36.532 21.3518C37.2438 20.6401 38.209 20.2403 39.2156 20.2403C40.2221 20.2403 41.1873 20.6401 41.8991 21.3518C42.6108 22.0635 43.0106 23.0288 43.0106 24.0353ZM20.9082 44.6399C25.5888 39.0941 35.127 39.0941 39.8126 44.6399C40.0217 44.9089 40.283 45.1329 40.5807 45.2984C40.8785 45.464 41.2066 45.5677 41.5454 45.6034C41.8842 45.639 42.2268 45.6059 42.5525 45.5059C42.8781 45.4059 43.1803 45.2412 43.4408 45.0217C43.7013 44.8021 43.9147 44.5322 44.0683 44.2281C44.222 43.924 44.3126 43.592 44.3348 43.2521C44.357 42.9121 44.3103 42.5712 44.1976 42.2497C44.0848 41.9282 43.9082 41.6328 43.6785 41.3813C36.9739 33.437 23.7419 33.437 17.0423 41.3813C16.8126 41.6328 16.6361 41.9282 16.5233 42.2497C16.4105 42.5712 16.3638 42.9121 16.386 43.2521C16.4082 43.592 16.4989 43.924 16.6525 44.2281C16.8061 44.5322 17.0196 44.8021 17.2801 45.0217C17.5406 45.2412 17.8427 45.4059 18.1684 45.5059C18.4941 45.6059 18.8366 45.639 19.1754 45.6034C19.5142 45.5677 19.8424 45.464 20.1401 45.2984C20.4379 45.1329 20.6991 44.9089 20.9082 44.6399Z" fill="#D9D9D9"/>
+</svg>
+<p class="title_error">Ошибка</p>
+<p class="desc_error">Похоже данные из канала перестали поступать.</p>
+<p class="desc_error_two">Пожалуйста, проверьте настройки канала.</p>
+</div>
+</div>
+					<div id="custom-pagination" class="custom-pagination">
+						<button id="prev-page" disabled>Прошлая</button>
+						<span id="page-info">1 из 1 страницы</span>
+						<button id="next-page" disabled>Следующая</button>
+					</div>
+    </div>
+<div id="export-button-container-2"></div>
+                </div>
+
+    <div class="col-lg-11 col-12 m-auto">
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      </div>
+    </div>
+  </div>
+
+  <div class="text_bottom_accordion">
+      <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+      <p>
+    Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+</div>
+</div>
+    </div>
+<div class="row">
+    <div class="col-12"></div>
+</div>
+            </div>
+        </div>
+<div class="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-11 col-12 m-auto">
+                <h2 class="title_section">Вопросы - ответы</h2>
+                <p class="desc_section">Everything you need to know about the product and billing.</p>
+            </div>
+            <div class="col-11 m-auto">
+<div class="accordion accordion-faq" id="faq">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingfaq1">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq1" aria-expanded="true" aria-controls="collapseFaq1">
+        Как добавить телеграм-канал?
+      </button>
+    </h2>
+    <div id="collapseFaq1" class="accordion-collapse collapse show" aria-labelledby="headingfaq1" data-bs-parent="#faq">
+      <div class="accordion-body">
+       Пожалуйста, воспользуйтесь телеграм-ботом <a href="@telegapressadd">@telegapressadd</a>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingfaq2">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq2" aria-expanded="false" aria-controls="collapseFaq2">
+        Как скачать статистику в Excel?
+      </button>
+    </h2>
+    <div id="collapseFaq2" class="accordion-collapse collapse" aria-labelledby="headingfaq2" data-bs-parent="#faq">
+      <div class="accordion-body">
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingfaq3">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq3" aria-expanded="false" aria-controls="collapseFaq3">
+        У вас есть api?
+      </button>
+    </h2>
+    <div id="collapseFaq3" class="accordion-collapse collapse" aria-labelledby="headingfaq3" data-bs-parent="#faq">
+      <div class="accordion-body">
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingfaq4">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq4" aria-expanded="false" aria-controls="collapseFaq4">
+        Подбираете ли вы телеграм-каналы для рекламы?
+      </button>
+    </h2>
+    <div id="collapseFaq4" class="accordion-collapse collapse" aria-labelledby="headingfaq4" data-bs-parent="#faq">
+      <div class="accordion-body">
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingfaq5">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq5" aria-expanded="false" aria-controls="collapseFaq5">
+        Можно заказать кастомный отчет?
+      </button>
+    </h2>
+    <div id="collapseFaq5" class="accordion-collapse collapse" aria-labelledby="headingfaq5" data-bs-parent="#faq">
+      <div class="accordion-body">
+        This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12">
+    <img src="img/mokup.png" alt="">
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+<footer>
+    <div class="container">
+        <div class="col-12 wrap_f d-lg-flex justify-content-lg-between">
+            <p class="copy_r">© telega.press</p>
+            <ul class="f_menu">
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://rawgit.com/Artemeey/5ebc39370e568c34f03dce1639cabee8/raw/8de40b26479c406ee9cd6f9b4b3f4ad05370a024/jquery.datepicker.extension.range.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.0/echarts.min.js" integrity="sha512-LYmkblt36DJsQPmCK+cK5A6Gp6uT7fLXQXAX0bMa763tf+DgiiH3+AwhcuGDAxM1SvlimjwKbkMPL3ZM1qLbag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+        $(document).ready(function () {
+    var emptyMessageHtml = $('.empty-table-message').html();
+
+            var table = $('#StaticTable').DataTable({
+             paging: true, // Отключение стандартной пагинации
+             info: false, // Отключение информации о таблице
+            scrollX: false,
+            responsive: false,
+            pagingType: "simple",
+            pageLength: 2, // Указать количество элементов на странице
+                language: {
+                     emptyTable: emptyMessageHtml,
+                    zeroRecords: "Нет данных за это время",
+		        	
+                },
+				drawCallback: function(settings) {
+				    var api = this.api();
+				    var rows = api.rows({ page: 'current' }).data().length;
+
+				    if (rows === 0) {
+				        $('.custom-pagination').addClass('table-empty');
+				    } else {
+				        $('.custom-pagination').removeClass('table-empty');
+				    }
+				},
+                dom: 'Bfrtip', // Включение кнопок DataTables
+                buttons: [
+                    {
+                        extend: 'excelHtml5',
+                        autoFilter: true,
+                        sheetName: 'Exported data',
+                        title: 'Статистика каналов',
+                        text: 'Скачать в Excel',
+                        className: 'excel-button'
+                    }
+                ],
+ 
+            });
+     // Перемещение кнопки в произвольное место
+            table.buttons().container().appendTo($('#export-button-container-2'));
+
+
+
+ function updateCustomPagination() {
+                var pageInfo = table.page.info();
+                $('#page-info').text(' Cтраница ' + (pageInfo.page + 1) + ' из ' + pageInfo.pages);
+                $('#prev-page').prop('disabled', pageInfo.page === 0);
+                $('#next-page').prop('disabled', pageInfo.page >= pageInfo.pages - 1);
+            }
+
+            // Инициализация кастомной пагинации
+            updateCustomPagination();
+
+            // Обработчики кликов на кнопки
+            $('#prev-page').on('click', function() {
+                table.page('previous').draw('page');
+                updateCustomPagination();
+            });
+
+            $('#next-page').on('click', function() {
+                table.page('next').draw('page');
+                updateCustomPagination();
+            });
+
+            // Обновление кастомной пагинации при изменении страницы
+            table.on('page', function() {
+                updateCustomPagination();
+            });
+
+
+  // Функция для обновления сообщения
+    function updateStatusMessage() {
+        if (table.data().count() === 0) {
+            // Если таблица пустая
+            $('.empty-table-message').html();
+        } else {
+            // Проверка наличия текста в поле поиска
+            var searchTerm = $('#search_table').val();
+            if (searchTerm.length > 0) {
+                $('.dataTables_empty').text('Ничего не найдено');
+            } else {
+                $('.dataTables_empty').text('Показаны все данные.');
+            }
+        }
+    }
+
+    // Запуск функции при инициализации
+    updateStatusMessage();
+
+
+
+            // Код для обработки отображения и поиска строк
+            var initialRows = 10;
+            var rowsShown = initialRows;
+
+            function updateVisibility() {
+                var rows = $('#StaticTable tbody tr');
+                rows.each(function (index, row) {
+                    if (index < rowsShown) {
+                        $(row).show();
+                    } else {
+                        $(row).hide();
+                    }
+                });
+
+                // Показываем/скрываем кнопку "Показать еще"
+                if (rows.length <= rowsShown) {
+                    $('#showMore').hide();
+                } else {
+                    $('#showMore').show();
+                }
+            }
+
+            updateVisibility();
+
+            $('#showMore').click(function () {
+                rowsShown += initialRows;
+                updateVisibility();
+            });
+
+            $('#search_table').on('input', function () {
+                table.search(this.value).draw();
+                rowsShown = initialRows;
+                updateStatusMessage();
+                updateVisibility();
+
+                setTimeout(function () {
+                    $('#StaticTable tbody tr').removeClass('highlight');
+                    var visibleRows = $('#StaticTable tbody tr:visible');
+                    visibleRows.addClass('highlight');
+                }, 200);
+            });
+
+            // Функция для фильтрации таблицы по датам
+            function filterTableByDate(startDate, endDate) {
+                var start = moment(startDate, "YYYY-MM-DD");
+                var end = moment(endDate, "YYYY-MM-DD");
+
+                $.fn.dataTable.ext.search.push(
+                    function (settings, data, dataIndex) {
+                        var date = moment(data[1], "YYYY-MM-DD");
+                        return date.isBetween(start, end, null, '[]');
+                    }
+                );
+updateStatusMessage();
+                table.draw();
+                $.fn.dataTable.ext.search.pop();
+            }
+
+
+            $('#date_range').datepicker({
+                range: 'period',
+                numberOfMonths: 1,
+                changeYear: true,
+                onSelect: function (dateText, inst, extensionRange) {
+                    $('[name=startDate]').val(extensionRange.startDateText);
+                    $('[name=endDate]').val(extensionRange.endDateText);
+
+                    if (!extensionRange.endDateText) {
+                        const startDateFormatted = moment(extensionRange.startDateText).format('D MMMM YYYY');
+                        $('#selectedPeriod').text(`Выбранный период: ${startDateFormatted} - ...`);
+                    } else {
+                        const startDateFormatted = moment(extensionRange.startDateText).format('D MMMM YYYY');
+                        const endDateFormatted = moment(extensionRange.endDateText).format('D MMMM YYYY');
+                        $('#selectedPeriod p').text(`${startDateFormatted} - ${endDateFormatted}`);
+                        filterTableByDate(extensionRange.startDateText, extensionRange.endDateText);
+                    }
+                },
+                dateFormat: 'yy-mm-dd'
+            });
+
+            $('#selectedPeriod').click(function () {
+                $('#date_range').toggle();
+            })
+
+
+
+        });
+    </script>
+   <script>
+        // Получаем элемент, в котором будет отображаться график
+        var CardLike = echarts.init(document.getElementById('card_like'));
+        // Опции для графика - Лайки
+        var option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: []
+            },
+            yAxis: {
+                type: 'value',
+                 max: 90,
+                show: false // Убираем ось Y
+            },
+            series: [
+                {
+                    name: 'Данные',
+                    type: 'line',
+                    smooth: true, // Добавляем параметр для плавности линии
+                    symbol: 'none', 
+                    lineStyle: {
+        			color: '#F04438',
+        		},
+                    areaStyle: {
+                    	color: '#FEF3F2',
+                        opacity: 1, // Устанавливаем прозрачность области
+                    },
+                    data: [0, 10, 30, 50, 21, 39, 60]
+                }
+            ]
+        };
+
+        // Используем указанные опции для отображения графика
+        CardLike.setOption(option);
+          window.addEventListener('resize', function () {
+            CardLike.resize();
+        });
+
+        var CardLike2 = echarts.init(document.getElementById('card_like2'));
+        // Опции для графика - Просмотры
+        var option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: []
+            },
+            yAxis: {
+                type: 'value',
+                 max: 90,
+                show: false // Убираем ось Y
+            },
+            series: [
+                {
+                    name: 'Данные',
+                    type: 'line',
+                    smooth: true, // Добавляем параметр для плавности линии
+                    symbol: 'none', 
+                    lineStyle: {
+        			color: '#12B76A',
+        		},
+                    areaStyle: {
+                    	color: '#ECFDF3',
+                        opacity: 1, // Устанавливаем прозрачность области
+                    },
+                    data: [0, 10, 12, 35, 45, 55, 70]
+                }
+            ]
+        };
+
+        // Используем указанные опции для отображения графика
+        CardLike2.setOption(option);
+          window.addEventListener('resize', function () {
+            CardLike2.resize();
+        });
+
+
+        var CardLike3 = echarts.init(document.getElementById('card_like3'));
+        // Опции для графика - Репосты
+        var option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: []
+            },
+            yAxis: {
+                type: 'value',
+                 max: 90,
+                show: false // Убираем ось Y
+            },
+            series: [
+                {
+                    name: 'Данные',
+                    type: 'line',
+                    smooth: true, // Добавляем параметр для плавности линии
+                    symbol: 'none', 
+                    lineStyle: {
+        			color: '#F04438',
+        		},
+                    areaStyle: {
+                    	color: '#FEF3F2',
+                        opacity: 1, // Устанавливаем прозрачность области
+                    },
+                    data: [0, 10, 30, 10, 21, 29, 55]
+                }
+            ]
+        };
+
+        // Используем указанные опции для отображения графика
+        CardLike3.setOption(option);
+          window.addEventListener('resize', function () {
+            CardLike3.resize();
+        });
+       document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl, {
+                    template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner custom-tooltip"></div></div>'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

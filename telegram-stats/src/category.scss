@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+// significant blocks
+.categories {
+  font-family: Inter, sans-serif;
+  background-color: #f7f7f7;
+
+  &-outer {
+    background-color: #fff;
+    padding-top: 35px;
+    padding: 35px 19px 200px 19px;
+  }
+
+  &-inner {
+    display: grid;
+    justify-items: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 11px;
+  }
+}
+.category-card {
+  padding: 18px 16px;
+  // height: 196px;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 402px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 9px;
+    font-weight: 500;
+  }
+  &__description {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    flex: 1 1 auto;
+  }
+  &__icons-box {
+    display: flex;
+    gap: 0px;
+    margin-bottom: 13px;
+  }
+  &__icon-wrapper {
+    display: inline-block;
+    border: 1px solid #b3b3b3;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 999px;
+    margin-right: -10px;
+  }
+  &__circle-avatar {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+  &__bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__channels-box {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  &__bottom-link {
+    display: inline-block;
+    border: none;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #222;
+    }
+  }
+}
+// END significant blocks
+
+// specific modifications to tables and wrappers for significant blocks
+.category-body {
+  background-color: #f7f7f7;
+}
+.best-posts-table__link {
+  color: #4419c1;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.table-wrapper {
+  font-family: 'DM sans', sans-serif;
+}
+.table-wrapper td {
+  font-weight: 500;
+}
+
+.advertising-table .table-wrapper,
+.best-posts-table .table-wrapper {
+  overflow: auto;
+}
+.advertising-table #channelTable,
+.best-posts-table #channelTable {
+  margin-bottom: 0;
+}
+.show-more-btn-box {
+  padding: 20px 8px;
+  background-color: #fff;
+}
+.advertising-table h3::after, .best-posts-table h3::after {
+  content: none !important;
+}
+.advertising-table h3, .best-posts-table h3 {
+  width: 170px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.table-wrapper tbody tr td {
+  background-color: #FAFCFC !important;
+}
+.table-wrapper thead th:not(:first-child) {
+  border-left: 1px solid #E5E7E7;
+}
+.best-posts-table tr td:nth-child(4) {
+  color: #4419c1;
+  font-weight: 500;
+}
+.best-posts-table tr td:nth-child(2) {
+  text-align-last: left;
+}
+.table-wrapper td {
+  color: #201E25;
+}
+.table-date {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+.best-posts-table tbody tr td:nth-child(2) {
+  vertical-align: top !important;
+}
+
+.get-downloaded-btn {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  padding: 6px 16px;
+  border: 1px solid #d5dbde;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.37s;
+
+  &:hover {
+    background-color: rgb(225, 225, 225);
+  }
+}
+// END specific modifications to tables and wrappers for significant blocks
+
+
+// media queries for categories block
+@media (max-width: 991px) {
+  .categories {
+    &-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .categories-outer {
+    padding: 20px 8px 40px 8px;
+  }
+  .categories-inner {
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .categories {
+    &-outer {
+      padding: 16px 0px 24px 0px;
+    }
+    &-inner {
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+  }
+  .category-card {
+    margin: auto;
+
+    &__bottom-link {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+// END media queries for categories block
